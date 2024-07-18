@@ -1,6 +1,7 @@
 import {
   EffectiveTime,
-  PassportType
+  PassportType,
+  LanguageRequirement,
 } from '../../organisms';
 
 function BasicInformation() {
@@ -8,6 +9,7 @@ function BasicInformation() {
     <div>
       <EffectiveTime />
       <PassportType />
+      <LanguageRequirement />
     </div>
   )
 }
