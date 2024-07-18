@@ -5,6 +5,7 @@ import {
 import Stack from '@mui/material/Stack';
 
 function EffectiveTime() {
+  
   return (
     <Stack
       padding={5}
@@ -12,6 +13,7 @@ function EffectiveTime() {
     >
       <TargetApplicationDate />
       <WPExpriyDate />
+      
     </Stack>
   )
 }

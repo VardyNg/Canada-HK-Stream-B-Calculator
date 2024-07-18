@@ -1,11 +1,13 @@
 import {
-  EffectiveTime
+  EffectiveTime,
+  PassportType
 } from '../../organisms';
 
 function BasicInformation() {
   return (
     <div>
       <EffectiveTime />
+      <PassportType />
     </div>
   )
 }
