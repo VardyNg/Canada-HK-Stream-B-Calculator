@@ -4,14 +4,22 @@ import {
   LanguageRequirement,
   WorkingHours,
 } from '../../organisms';
-
+import Criteria from './criteria';
 function BasicInformation() {
   return (
     <div>
-      <EffectiveTime />
-      <PassportType />
-      <LanguageRequirement />
-      <WorkingHours />
+      <Criteria 
+        children={<EffectiveTime />} 
+      />
+      <Criteria 
+        children={<PassportType />} 
+      />
+      <Criteria 
+        children={<LanguageRequirement />} 
+      />
+      <Criteria 
+        children={<WorkingHours />} 
+      />
     </div>
   )
 }

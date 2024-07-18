@@ -8,7 +8,6 @@ function EffectiveTime() {
   
   return (
     <Stack
-      padding={5}
       spacing={2}
     >
       <TargetApplicationDate />
