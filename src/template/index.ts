@@ -1,5 +1,5 @@
-import BasicInformation from './stream-b-calculator/basic-information';
+import StreamBCalculator from './stream-b-calculator';
 
 export {
-  BasicInformation
+  StreamBCalculator
 }

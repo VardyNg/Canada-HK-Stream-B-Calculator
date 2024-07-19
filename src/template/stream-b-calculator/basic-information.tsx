@@ -1,26 +1,24 @@
 import {
   EffectiveTime,
   PassportType,
-  LanguageRequirement,
-  WorkingHours,
 } from '../../organisms';
 import Criteria from './criteria';
 function BasicInformation() {
+
+  const Content = () => {
+    return (
+      <>
+        <EffectiveTime />
+        <PassportType />
+      </>
+    )
+  }
+
   return (
-    <div>
-      <Criteria 
-        children={<EffectiveTime />} 
-      />
-      <Criteria 
-        children={<PassportType />} 
-      />
-      <Criteria 
-        children={<LanguageRequirement />} 
-      />
-      <Criteria 
-        children={<WorkingHours />} 
-      />
-    </div>
+    <Criteria 
+      children={<Content />} 
+      title='基本資料 Basic Information'
+    />
   )
 }
 

@@ -8,6 +8,7 @@ import Grid from '@mui/material/Grid';
 
 type CriteriaProps = {
   children: ReactNode;
+  title: string;
 };
 
 
@@ -21,6 +22,7 @@ const Item = styled(Paper)(({ theme }) => ({
 function Criteria(prop: CriteriaProps) {
   return (
     <Grid container>
+      {prop.title}
       <Box
         sx={{
           p: 2,

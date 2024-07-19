@@ -3,13 +3,14 @@ import {
   TopBar
 } from '../organisms';
 import {
-  BasicInformation
+  StreamBCalculator as StreamBCalculatorTemplate
 } from '../template';
+
 function StreamBCalculator() {
   return (
     <div>
       <TopBar/>
-      <BasicInformation />
+      <StreamBCalculatorTemplate />
     </div>
   )
 }
