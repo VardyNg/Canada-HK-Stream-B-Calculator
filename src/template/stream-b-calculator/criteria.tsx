@@ -21,7 +21,10 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function Criteria(prop: CriteriaProps) {
   return (
-    <Grid container>
+    <Grid 
+      container
+      padding={2}
+    >
       {prop.title}
       <Box
         sx={{
