@@ -7,13 +7,16 @@ import FormLabel from '@mui/material/FormLabel';
 import {
   LanguageTestTypeEnum
 } from '../../data';
+import {
+  LanguageExamSlider
+} from '../../molecules'
 function LanguageRequirement() {
-  const [testType, setTestType] = React.useState('');
+  const [testType, setTestType] = React.useState<LanguageTestTypeEnum>(LanguageTestTypeEnum.IELTS);
   const [errorPassport, setErrorPassport] = React.useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log('handleChange');
-    setTestType(event.target.value);
+    setTestType(event.target.value as LanguageTestTypeEnum);
   };
 
   return (
@@ -39,18 +42,11 @@ function LanguageRequirement() {
           control={<Radio />} 
           label="PTE" 
         />
-        <FormControlLabel
-          value={LanguageTestTypeEnum.TEF}
-          control={<Radio />} 
-          label="TEF" 
-        />
-        <FormControlLabel
-          value={LanguageTestTypeEnum.TCF}
-          control={<Radio />} 
-          label="TCF" 
-        />
       </RadioGroup>
       {errorPassport}
+      <LanguageExamSlider 
+        type={testType}
+      />
     </FormControl>
   )
 }
