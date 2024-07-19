@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   LanguageTestTypeEnum
 } from '../../data';
@@ -15,6 +16,32 @@ type LanguageExamSliderProp = {
 function LanguageExamSlider(props: LanguageExamSliderProp) {
   const spec = LanguageTestSpec[props.type];
   console.log(spec);
+
+  const [readingScore, setReadingScore] = useState(0);
+  const [writingScore, setWritingScore] = useState(0);
+  const [listeningScore, setListeningScore] = useState(0);
+  const [speakingScore, setSpeakingScore] = useState(0);
+
+  const onReadingScoreChange = (newValue: number) => {
+    setReadingScore(newValue);
+  }
+
+  const onWritingScoreChange = (newValue: number) => {
+    setWritingScore(newValue);
+  }
+
+  const onListeningScoreChange = (newValue: number) => {
+    setListeningScore(newValue);
+  }
+
+  const onSpeakingScoreChange = (newValue: number) => {
+    setSpeakingScore(newValue);
+  }
+
+  const componentFailed = (score: number, passingScore: number) => {
+    return score < passingScore;
+  }
+
   return (
     <>  
     {props.type}
@@ -27,24 +54,36 @@ function LanguageExamSlider(props: LanguageExamSliderProp) {
         min={spec.min}
         max={spec.max}
         step={spec.step}
+        value={readingScore}
+        onChange={onReadingScoreChange}
+        error={componentFailed(readingScore, spec.passing_score_reading)}
       />
       Writing
       <Slider 
         min={spec.min}
         max={spec.max}
         step={spec.step}
+        value={writingScore}
+        onChange={onWritingScoreChange}
+        error={componentFailed(writingScore, spec.passing_score_writing)}
       />
       Listening
       <Slider 
         min={spec.min}
         max={spec.max}
         step={spec.step}
+        value={listeningScore}
+        onChange={onListeningScoreChange}
+        error={componentFailed(listeningScore, spec.passing_score_listening)}
       />
       Speaking
       <Slider 
         min={spec.min}
         max={spec.max}
         step={spec.step}
+        value={speakingScore}
+        onChange={onSpeakingScoreChange}
+        error={componentFailed(speakingScore, spec.passing_score_speaking)}
       />
     </Stack>
     </>
