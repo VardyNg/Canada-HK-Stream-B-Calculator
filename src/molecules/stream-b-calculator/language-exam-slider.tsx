@@ -14,11 +14,13 @@ type LanguageExamSliderProp = {
 
 function LanguageExamSlider(props: LanguageExamSliderProp) {
   const spec = LanguageTestSpec[props.type];
+  console.log(spec);
   return (
     <>  
     {props.type}
     <Stack
       direction='row'
+      height={300}
     >
       Reading
       <Slider 
