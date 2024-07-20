@@ -1,8 +1,12 @@
-import { JobTypePicker } from "../../molecules";
+import {
+  JobTypePicker,
+  JobNameTextField
+} from "../../molecules";
 function NewJobFields() {
   return (
     <>
       <JobTypePicker />
+      <JobNameTextField />
     </>
   )
 }
