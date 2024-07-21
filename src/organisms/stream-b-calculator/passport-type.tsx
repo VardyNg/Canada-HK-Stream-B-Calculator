@@ -7,6 +7,10 @@ import FormLabel from '@mui/material/FormLabel';
 import {
   PassportTypeEnum,
 } from '../../data'
+import {
+  ErrorPassportType
+} from '../../molecules';
+
 function PassportType() {
   const [passportType, setPassportType] = React.useState('');
   const [errorPassport, setErrorPassport] = React.useState(false);
@@ -17,6 +21,8 @@ function PassportType() {
   };
 
   React.useEffect(() => {
+    console.log(passportType);
+    console.log(passportType === PassportTypeEnum.OTHER);
     setErrorPassport(passportType === PassportTypeEnum.OTHER)
   }, [passportType])
 
@@ -44,7 +50,7 @@ function PassportType() {
           label="Other" 
         />
       </RadioGroup>
-      {errorPassport}
+      {errorPassport && <ErrorPassportType />}
     </FormControl>
   )
 }
