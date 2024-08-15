@@ -57,6 +57,7 @@ function LanguageExamSlider(props: LanguageExamSliderProp) {
         value={readingScore}
         onChange={onReadingScoreChange}
         error={componentFailed(readingScore, spec.passing_score_reading)}
+        passing={spec.passing_score_reading}
       />
       Writing
       <Slider 
@@ -66,6 +67,7 @@ function LanguageExamSlider(props: LanguageExamSliderProp) {
         value={writingScore}
         onChange={onWritingScoreChange}
         error={componentFailed(writingScore, spec.passing_score_writing)}
+        passing={spec.passing_score_writing}
       />
       Listening
       <Slider 
@@ -75,6 +77,7 @@ function LanguageExamSlider(props: LanguageExamSliderProp) {
         value={listeningScore}
         onChange={onListeningScoreChange}
         error={componentFailed(listeningScore, spec.passing_score_listening)}
+        passing={spec.passing_score_listening}
       />
       Speaking
       <Slider 
@@ -84,6 +87,7 @@ function LanguageExamSlider(props: LanguageExamSliderProp) {
         value={speakingScore}
         onChange={onSpeakingScoreChange}
         error={componentFailed(speakingScore, spec.passing_score_speaking)}
+        passing={spec.passing_score_speaking}
       />
     </Stack>
     </>

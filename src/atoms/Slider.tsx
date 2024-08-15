@@ -3,6 +3,7 @@ import { Slider as SliderMui } from '@mui/material';
 type SliderProp = {
   min: number,
   max: number,
+  passing: number,
   step: number,
   value: number,
   error: boolean,
@@ -14,6 +15,10 @@ function Slider(props: SliderProp) {
     {
       value: props.min,
       label: props.min
+    },
+    {
+      value: props.passing,
+      label: props.passing,
     },
     {
       value: props.max,
