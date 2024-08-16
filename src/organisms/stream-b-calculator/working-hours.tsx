@@ -1,13 +1,36 @@
+import * as React from 'react';
 import NewJobFields from './new-job-fields';
 import {
   AddJobButton,
-} from '../../molecules'
+} from '../../molecules';
+import {
+  Job
+} from '../../interfaces';
+
 function WorkingHours() {
+  const [jobs, setJobs] = React.useState<Array<Job>>([]);
+  
+  const handleAddJob = () => {
+    console.log('handleAddJob')
+    setJobs([
+      ...jobs,
+      {}
+    ])
+  }
+
   return (
     <>
       Working hours
-      <AddJobButton />
-      <NewJobFields />
+      <AddJobButton 
+        onClick={handleAddJob}
+        />
+      {
+        jobs.map(() => {
+          return(
+            <NewJobFields />
+          )
+        })
+      }
     </>
   )
 }
