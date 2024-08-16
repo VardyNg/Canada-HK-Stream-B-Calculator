@@ -2,7 +2,8 @@ import {
   JobTypePicker,
   JobNameTextField,
   JobStartTimePicker,
-  JobEndTimePicker
+  JobEndTimePicker,
+  RemoveJobButton,
 } from "../../molecules";
 
 function NewJobFields() {
@@ -15,6 +16,9 @@ function NewJobFields() {
       />
       <JobEndTimePicker 
         onChange={() => {}}
+      />
+      <RemoveJobButton 
+        onClick={() => {}}
       />
     </>
   )

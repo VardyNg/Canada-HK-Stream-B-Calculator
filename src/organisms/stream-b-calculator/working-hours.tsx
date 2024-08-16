@@ -23,10 +23,10 @@ function WorkingHours() {
       Working hours
       <AddJobButton 
         onClick={handleAddJob}
-        />
+      />
       {
         jobs.map(() => {
-          return(
+          return (
             <NewJobFields />
           )
         })

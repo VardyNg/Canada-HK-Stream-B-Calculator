@@ -8,6 +8,7 @@ import ErrorPassportType from './stream-b-calculator/ErrorPassportType';
 import JobStartTimePicker from "./stream-b-calculator/job-start-time-picker";
 import JobEndTimePicker from "./stream-b-calculator/job-end-time-picker";
 import AddJobButton from './stream-b-calculator/add-job-button';
+import RemoveJobButton from './stream-b-calculator/remove-job-button';
 export {
   TopBar,
   TargetApplicationDate,
@@ -19,4 +20,5 @@ export {
   JobStartTimePicker,
   JobEndTimePicker,
   AddJobButton,
+  RemoveJobButton,
 }
