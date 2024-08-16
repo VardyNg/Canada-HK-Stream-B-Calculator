@@ -13,7 +13,7 @@ import {
 
 type DatePickerProps = {
   label: string,
-  localStorageKey: string
+  localStorageKey?: string
   maxDate?: any
   minDate?: any
   onChange: Function
@@ -29,7 +29,7 @@ function DatePicker(props: DatePickerProps){
         value={value}
         onChange={(newValue: any) => {
           setValue(newValue);
-          LocalStorageManager.setValue(props.localStorageKey, newValue)
+          // LocalStorageManager.setValue(props.localStorageKey, newValue)
           props.onChange(newValue)
         }}
         format={Constants.DATE_FORMAT}

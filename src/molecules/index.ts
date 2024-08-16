@@ -5,7 +5,9 @@ import LanguageExamSlider from "./stream-b-calculator/language-exam-slider";
 import JobTypePicker from './stream-b-calculator/job-type-picker';
 import JobNameTextField from './stream-b-calculator/job-name-text-field';
 import ErrorPassportType from './stream-b-calculator/ErrorPassportType';
- 
+import JobStartTimePicker from "./stream-b-calculator/job-start-time-picker";
+import JobEndTimePicker from "./stream-b-calculator/job-end-time-picker";
+
 export {
   TopBar,
   TargetApplicationDate,
@@ -14,4 +16,6 @@ export {
   JobTypePicker,
   JobNameTextField,
   ErrorPassportType,
+  JobStartTimePicker,
+  JobEndTimePicker
 }

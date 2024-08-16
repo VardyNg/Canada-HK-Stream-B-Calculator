@@ -24,6 +24,7 @@ function Criteria(prop: CriteriaProps) {
     <Grid 
       container
       padding={2}
+      
     >
       {prop.title}
       <Box
