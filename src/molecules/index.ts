@@ -7,7 +7,7 @@ import JobNameTextField from './stream-b-calculator/job-name-text-field';
 import ErrorPassportType from './stream-b-calculator/ErrorPassportType';
 import JobStartTimePicker from "./stream-b-calculator/job-start-time-picker";
 import JobEndTimePicker from "./stream-b-calculator/job-end-time-picker";
-
+import AddJobButton from './stream-b-calculator/add-job-button';
 export {
   TopBar,
   TargetApplicationDate,
@@ -17,5 +17,6 @@ export {
   JobNameTextField,
   ErrorPassportType,
   JobStartTimePicker,
-  JobEndTimePicker
+  JobEndTimePicker,
+  AddJobButton,
 }
