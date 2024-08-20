@@ -8,6 +8,7 @@ import {
 } from '../../molecules';
 import Stack from '@mui/material/Stack';
 import moment from 'moment';
+import FormLabel from '@mui/material/FormLabel';
 
 function EffectiveTime() {
   const [targetApplicationDate, setTargetApplicationDate] = useState('');
@@ -40,6 +41,7 @@ function EffectiveTime() {
     <Stack
       spacing={2}
     >
+      <FormLabel>申請時間 Application Date</FormLabel>
       <TargetApplicationDate
         onChange={onTargetApplicationDateChange}
       />
