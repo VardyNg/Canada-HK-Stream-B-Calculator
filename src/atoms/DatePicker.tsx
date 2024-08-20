@@ -21,7 +21,7 @@ type DatePickerProps = {
 
 function DatePicker(props: DatePickerProps){
   const [value, setValue] = React.useState(null);
-  
+  console.log(props.maxDate)
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DatePickerMui

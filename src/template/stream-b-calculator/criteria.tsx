@@ -23,7 +23,11 @@ function Criteria(prop: CriteriaProps) {
   return (
     <Grid 
       container
+      item
       padding={2}
+      xs={12}
+      justifyContent="center"
+      alignItems="center"
     >
       <Grid
         item
@@ -36,7 +40,6 @@ function Criteria(prop: CriteriaProps) {
             borderRadius: 2,
             bgcolor: 'background.default',
             display: 'grid',
-            gridTemplateColumns: { md: '1fr 1fr' },
             gap: 2,
           }}
         >
