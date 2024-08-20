@@ -28,6 +28,9 @@ function  LanguageRequirement() {
         row
         name="row-radio-buttons-group"
         onChange={handleChange}
+        style={{
+          justifyContent: 'center'
+        }}
       >
         <FormControlLabel
           value={LanguageTestTypeEnum.CELPIP} 
