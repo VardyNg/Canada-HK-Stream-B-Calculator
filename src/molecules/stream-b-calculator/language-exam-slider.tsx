@@ -14,13 +14,18 @@ type LanguageExamSliderProp = {
 }
 
 function LanguageExamSlider(props: LanguageExamSliderProp) {
-  const spec = LanguageTestSpec[props.type];
-  console.log(spec);
 
+  
   const [readingScore, setReadingScore] = useState(0);
   const [writingScore, setWritingScore] = useState(0);
   const [listeningScore, setListeningScore] = useState(0);
   const [speakingScore, setSpeakingScore] = useState(0);
+  
+  if (props.type === LanguageTestTypeEnum.None ) {
+    return <></>
+  }
+
+  const spec = LanguageTestSpec[props.type];
 
   const onReadingScoreChange = (newValue: number) => {
     setReadingScore(newValue);

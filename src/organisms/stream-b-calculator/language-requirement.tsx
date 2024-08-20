@@ -10,8 +10,10 @@ import {
 import {
   LanguageExamSlider
 } from '../../molecules'
-function LanguageRequirement() {
-  const [testType, setTestType] = React.useState<LanguageTestTypeEnum>(LanguageTestTypeEnum.IELTS);
+import Fade from '@mui/material/Fade';
+
+function  LanguageRequirement() {
+  const [testType, setTestType] = React.useState<LanguageTestTypeEnum>(LanguageTestTypeEnum.None);
   const [errorPassport, setErrorPassport] = React.useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,9 +46,15 @@ function LanguageRequirement() {
         />
       </RadioGroup>
       {errorPassport}
-      <LanguageExamSlider 
-        type={testType}
-      />
+      <Fade
+        in={testType !== LanguageTestTypeEnum.None}
+      >
+        <div>
+          <LanguageExamSlider 
+            type={testType}
+          />
+        </div>
+      </Fade>
     </FormControl>
   )
 }
