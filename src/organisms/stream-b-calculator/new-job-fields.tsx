@@ -5,10 +5,11 @@ import {
   JobEndTimePicker,
   RemoveJobButton,
 } from "../../molecules";
+import Grid from '@mui/material/Grid';
 
 function NewJobFields() {
   return (
-    <>
+    <Grid>
       <JobTypePicker />
       <JobNameTextField />
       <JobStartTimePicker 
@@ -20,7 +21,7 @@ function NewJobFields() {
       <RemoveJobButton 
         onClick={() => {}}
       />
-    </>
+    </Grid>
   )
 }
 

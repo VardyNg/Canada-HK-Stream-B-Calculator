@@ -6,6 +6,7 @@ import {
 import {
   Job
 } from '../../interfaces';
+import Stack from '@mui/material/Stack';
 
 function WorkingHours() {
   const [jobs, setJobs] = React.useState<Array<Job>>([]);
@@ -24,13 +25,15 @@ function WorkingHours() {
       <AddJobButton 
         onClick={handleAddJob}
       />
-      {
-        jobs.map(() => {
-          return (
-            <NewJobFields />
-          )
-        })
-      }
+      <Stack>
+        {
+          jobs.map(() => {
+            return (
+              <NewJobFields />
+            )
+          })
+        }
+      </Stack>
     </>
   )
 }
