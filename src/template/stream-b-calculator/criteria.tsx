@@ -24,23 +24,27 @@ function Criteria(prop: CriteriaProps) {
     <Grid 
       container
       padding={2}
-      
     >
-      {prop.title}
-      <Box
-        sx={{
-          p: 2,
-          borderRadius: 2,
-          bgcolor: 'background.default',
-          display: 'grid',
-          gridTemplateColumns: { md: '1fr 1fr' },
-          gap: 2,
-        }}
+      <Grid
+        item
+        xs={10}
       >
-        <Item>
-          {prop.children}
-        </Item>
-      </Box>
+        {prop.title}
+        <Box
+          sx={{
+            p: 2,
+            borderRadius: 2,
+            bgcolor: 'background.default',
+            display: 'grid',
+            gridTemplateColumns: { md: '1fr 1fr' },
+            gap: 2,
+          }}
+        >
+          <Item>
+            {prop.children}
+          </Item>
+        </Box>
+      </Grid>
     </Grid>
   )
 }
