@@ -7,6 +7,7 @@ import {
   Job
 } from '../../interfaces';
 import Stack from '@mui/material/Stack';
+import WorkingHoursSummary from './working-hours-summary';
 
 function WorkingHours() {
   const [jobs, setJobs] = React.useState<Array<Job>>([]);
@@ -34,6 +35,7 @@ function WorkingHours() {
           })
         }
       </Stack>
+      <WorkingHoursSummary />
     </>
   )
 }
