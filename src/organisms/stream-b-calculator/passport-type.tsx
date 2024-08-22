@@ -4,13 +4,13 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import Stack from '@mui/material/Stack';
 import {
   PassportTypeEnum,
 } from '../../data'
 import {
   ErrorPassportType
 } from '../../molecules';
-
 function PassportType() {
   const [passportType, setPassportType] = React.useState('');
   const [errorPassport, setErrorPassport] = React.useState(false);
@@ -34,21 +34,23 @@ function PassportType() {
         name="row-radio-buttons-group"
         onChange={handleChange}
       >
-        <FormControlLabel
-          value={PassportTypeEnum.HKSAR} 
-          control={<Radio />} 
-          label="香港特區護照 Hong Kong Special Administrative Region of the People’s Republic of China" 
-        />
-        <FormControlLabel
-          value={PassportTypeEnum.BNO}
-          control={<Radio />} 
-          label="BNO British National (Overseas)" 
-        />
-        <FormControlLabel
-          value={PassportTypeEnum.OTHER}
-          control={<Radio />} 
-          label="Other" 
-        />
+        <Stack>
+          <FormControlLabel
+            value={PassportTypeEnum.HKSAR} 
+            control={<Radio />} 
+            label="香港特區護照 Hong Kong Special Administrative Region of the People’s Republic of China" 
+          />
+          <FormControlLabel
+            value={PassportTypeEnum.BNO}
+            control={<Radio />} 
+            label="BNO British National (Overseas)" 
+          />
+          <FormControlLabel
+            value={PassportTypeEnum.OTHER}
+            control={<Radio />} 
+            label="Other" 
+          />
+        </Stack>
       </RadioGroup>
       {errorPassport && <ErrorPassportType />}
     </FormControl>
