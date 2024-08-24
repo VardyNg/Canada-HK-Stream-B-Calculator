@@ -4,6 +4,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import Paper from '@mui/material/Paper';
 import {
   LanguageTestTypeEnum
 } from '../../data';
@@ -52,11 +53,11 @@ function  LanguageRequirement() {
       <Fade
         in={testType !== LanguageTestTypeEnum.None}
       >
-        <div>
+        <Paper>
           <LanguageExamSlider 
             type={testType}
           />
-        </div>
+        </Paper>
       </Fade>
     </FormControl>
   )
