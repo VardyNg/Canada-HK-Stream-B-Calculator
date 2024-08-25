@@ -23,37 +23,46 @@ const rows = [
 ];
 
 function WorkingHoursSummary() {
+  
+  const WorkingHoursTable = () => {
+    return (
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>年 Year</TableCell>
+              <TableCell align="right">周 week</TableCell>
+              <TableCell align="right">工作時數 Working Hours</TableCell>
+              <TableCell align="right">有效工作時數 Effective Working Hours</TableCell>
+              <TableCell align="right">對應週數 Equivalent No. of Week</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow
+                key={row.year}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell component="th" scope="row">
+                  {row.year}
+                </TableCell>
+                <TableCell align="right">{row.week_no}</TableCell>
+                <TableCell align="right">{row.working_hours}</TableCell>
+                <TableCell align="right">{row.effective_working_hours}</TableCell>
+                <TableCell align="right">{row.equivalent_week_no}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    )
+  }
 
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>年 Year</TableCell>
-            <TableCell align="right">周 week</TableCell>
-            <TableCell align="right">工作時數 Working Hours</TableCell>
-            <TableCell align="right">有效工作時數 Effective Working Hours</TableCell>
-            <TableCell align="right">對應週數 Equivalent No. of Week</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.year}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.year}
-              </TableCell>
-              <TableCell align="right">{row.week_no}</TableCell>
-              <TableCell align="right">{row.working_hours}</TableCell>
-              <TableCell align="right">{row.effective_working_hours}</TableCell>
-              <TableCell align="right">{row.equivalent_week_no}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <>
+      工時總結 Working Hour Summary
+      <WorkingHoursTable />
+    </>
   )
 }
 
